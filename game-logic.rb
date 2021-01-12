@@ -25,12 +25,18 @@ class Board
   end
 
   def change_square(str)
-  if 0 < str.to_i < 9 
-    p 'That is not a valid number!'
     
+    flag = true
+    while flag
+      if 0 < str.to_i < 9 
+      p 'That is not a valid number!'
 
-
-    index = str.to_i -1
+      else
+        index = str.to_i - 1
+        @squares[index] = Square.new()
+        flag = false
+      end
+    end
   end
 end
 
