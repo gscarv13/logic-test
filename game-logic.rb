@@ -25,7 +25,10 @@ class Board
   end
 
   def change_square(str)
-    puts 'That is not a valid number!' unless 0 < str.to_i < 9
+  if 0 < str.to_i < 9 
+    p 'That is not a valid number!'
+    
+
 
     index = str.to_i -1
   end
